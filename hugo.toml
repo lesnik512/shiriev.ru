@@ -1,19 +1,19 @@
 baseURL = 'https://shiriev.ru/'
 languageCode = 'en-us'
-title = 'Shiriev Artur'
+title = 'Artur Shiriev'
 theme = 'hugo-blog-awesome'
 
 [params]
 sitename = "Artur's Blog"
 defaultColor = "auto"
-description = "I am teamlead, techlead and Full Stack Web Developer with 13+ years of industry experience. Mostly worked with Python (FastAPI), TypeScript (React). Have experience working with golang, PHP."
+description = "I am teamlead, techlead and Full Stack Developer with 13+ years of industry experience. Mostly worked with Python (FastAPI), TypeScript (React). Have experience working with golang, PHP."
 mainSections = ['posts']
 toc = true
 goToTop = true
 
 [params.author]
 intro = "Artur Shiriev"
-name = "Artur Shiriev aka lesnik512"
+name = "Artur Shiriev"
 description = "Teamlead, techlead at Raiffeisen. Full Stack Web Developer with 13+ years of experience. Python, TypeScript, devops"
 
 [menu]
@@ -50,7 +50,7 @@ name = "email"
 url = "mailto:me@shiriev.ru"
 
 [[params.socialIcons]]
-name = "Rss"
+name = "rss"
 url = "/index.xml"
 
 [privacy]
