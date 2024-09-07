@@ -1,0 +1,68 @@
+baseURL = 'https://shiriev.ru/'
+languageCode = 'en-us'
+title = 'Shiriev Artur'
+theme = 'hugo-blog-awesome'
+
+[params]
+sitename = "Artur's Blog"
+defaultColor = "auto"
+description = "I am teamlead, techlead and Full Stack Web Developer with 13+ years of industry experience. Mostly worked with Python (FastAPI), TypeScript (React). Have experience working with golang, PHP."
+mainSections = ['posts']
+toc = true
+goToTop = true
+
+[params.author]
+intro = "Artur Shiriev"
+name = "Artur Shiriev aka lesnik512"
+description = "Teamlead, techlead at Raiffeisen. Full Stack Web Developer with 13+ years of experience. Python, TypeScript, devops"
+
+[menu]
+[[menu.main]]
+pageRef="/"
+name = 'Home'
+url = '/'
+weight = 10
+[[menu.main]]
+pageRef="posts"
+name = 'Posts'
+url = '/posts/'
+weight = 20
+[[menu.main]]
+pageRef="about"
+name = 'About'
+url = '/about/'
+weight = 30
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/lesnik512/"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/artur-shiriev/"
+
+[[params.socialIcons]]
+name = "stackoverflow"
+url = "https://stackoverflow.com/users/4794759/artur-shiriev"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:me@shiriev.ru"
+
+[[params.socialIcons]]
+name = "Rss"
+url = "index.xml"
+
+[privacy]
+[privacy.disqus]
+disable = true
+[privacy.googleAnalytics]
+disable = true
+[privacy.instagram]
+disable = true
+[privacy.twitter]
+disable = true
+[privacy.vimeo]
+disable = true
+[privacy.youtube]
+disable = true
