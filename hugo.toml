@@ -51,7 +51,7 @@ url = "mailto:me@shiriev.ru"
 
 [[params.socialIcons]]
 name = "Rss"
-url = "index.xml"
+url = "/index.xml"
 
 [privacy]
 [privacy.disqus]
