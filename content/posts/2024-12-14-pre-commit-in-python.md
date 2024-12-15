@@ -1,17 +1,19 @@
 +++
-title = 'Alternatives to pre-commit package in python development'
+title = 'Using pre-commit package in python development'
 date = 2024-12-14T00:00:00+03:00
 +++
 # Introduction.
 
 Package `pre-commit`, as stated on the github-page, is a framework for managing and maintaining multi-language pre-commit hooks.
 
-In my opinion, this package brings too many troubles and I want to show you alternative ways.
+Mostly, it's used for managing git hook right before commit to run some static checks or formatters.
 
-# Problems.
+In my opinion, this package is often misused and I want to show you the alternative way.
 
-1. It has separate configuration file with tools' versions differ from `pyproject.toml` and this is developer's problem to sync them.
-2. `pre-commit` uses separate virtual environments which is not very intuitive and can lead to unexpected behaviour.
+# Problems of `pre-commit`.
+
+1. It has separate configuration file with tools versions differ from `pyproject.toml` and this is developer's problem to sync them.
+2. It uses separate virtual environments which is not very intuitive and can lead to unexpected behaviour.
 3. For `mypy` if we want to check types of external packages, `pre-commit` by-default is not able to use dependencies from `pyproject.toml` and we need to list them in config file in `additional_dependencies` section.
 
 # Alternative solution.
@@ -38,10 +40,10 @@ lint:
     uv run mypy .
 ```
 
-## 2.1. Running `just` by `pre-commit`
+## 2. Running `just` by `pre-commit`
 
 If you need to run static checks after committing changes to repo, `pre-commit` can run "just"-commands.
-Here is the content of my `.pre-commit-config.yaml`
+Here is the example of `.pre-commit-config.yaml`
 
 ```yaml
 repos:
@@ -56,17 +58,8 @@ repos:
     pass_filenames: false
 ```
 
-Install git pre-commit hook by running `pre-commit install`.
-Now, after each commit, `just lint` command will be called.
+Now run `pre-commit install` to install pre-commit hook and before commiting `just lint` command will be called
 
-## 2.2. Creating git hooks manually
+# Summary
 
-Actually, you don't need `pre-commit` to create pre-commit hooks. Add such command in your `Justfile`:
-
-```
-hook:
-    echo "just lint" > .git/hooks/pre-commit
-    chmod +x .git/hooks/pre-commit
-```
-
-Run `just hook`. It will create pre-commit hook which calls `just lint` command.
+By this way we are solving all the problems: we run exactly the same commands in exactly the same environment with all dependencies.
