@@ -42,6 +42,10 @@ name = "linkedin"
 url = "https://www.linkedin.com/in/artur-shiriev/"
 
 [[params.socialIcons]]
+name = "telegram"
+url = "https://t.me/modern_python"
+
+[[params.socialIcons]]
 name = "stackoverflow"
 url = "https://stackoverflow.com/users/4794759/artur-shiriev"
 
