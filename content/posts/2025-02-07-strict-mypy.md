@@ -76,12 +76,12 @@ error: Skipping analyzing 'orjson': found module but no type hints or library st
 
 This can be fixed, using stubs from https://github.com/python/typeshed
 
-So for errors behind we need to install packages `types-redis` and `types-orjson`
+So for errors above we need to install packages `types-redis` and `types-orjson`
 
 ### `py.typed` marker
 
 Second of all, we had some inner packages which were typed, but not marked as typed.
-In order to mark typed package, `py.typed` needs to be placed in libraries root directory
+In order to mark typed package, `py.typed` needs to be placed in libraries directory as [here](https://github.com/modern-python/that-depends/tree/main/that_depends).
 
 ### `*-stubs` packages
 
@@ -110,7 +110,7 @@ import pydantic
 class MessageCreate(pydantic.BaseModel):
    name: str
 
-class Message(pydantic.BaseModel):
+class Message(MessageCreate):
    id: int
 ```
 
