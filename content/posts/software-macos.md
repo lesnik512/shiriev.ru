@@ -18,4 +18,5 @@ brew install --cask iterm2 visual-studio-code appcleaner
 ## macos software
 - [Beekeeper Studio Community Edition](https://github.com/beekeeper-studio/beekeeper-studio/releases/tag/v3.9.18) - free DB manager
 - [Moockoon](https://mockoon.com/) - creating mocks
-- [OpenLens](https://github.com/MuhammedKalkan/OpenLens) - IDE for k8s
+- [FreeLens](https://github.com/freelensapp/freelens) - IDE for k8s
+- [Handy](https://handy.computer) - speech to text
